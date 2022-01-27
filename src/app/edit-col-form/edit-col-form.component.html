@@ -1,0 +1,121 @@
+<div>
+    <form
+        class="form-container"
+        [formGroup]="editColForm"
+        (ngSubmit)="onSubmit()"
+    >
+        <mat-form-field
+            class="field-full-width"
+            appearance="fill"
+        >
+            <mat-label>Column Name</mat-label>
+            <input
+                matInput
+                placeholder="Name of column"
+                formControlName="colName"
+            >
+        </mat-form-field>
+        <mat-form-field
+            class="field-full-width"
+            appearance="fill"
+        >
+        <mat-label>Data Type</mat-label>
+            <mat-select formControlName="dataType">
+                <mat-option
+                    *ngFor="let option of dataTypeOptions"
+                    [value]="option"
+                >
+                    {{option}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field
+            class="field-full-width"
+            appearance="fill"
+        >
+            <mat-label>Default Value</mat-label>
+            <input
+                matInput
+                placeholder="default value for column"
+                formControlName="defaultValue"
+            >
+        </mat-form-field>
+        <mat-form-field
+            class="field-full-width"
+            appearance="fill"
+        >
+            <mat-label>Min Col Width</mat-label>
+            <input
+                matInput
+                placeholder="minimum width of column"
+                formControlName="minColWidth"
+            >
+        </mat-form-field>
+        <mat-form-field
+            class="field-full-width"
+            appearance="fill"
+        >
+            <mat-label>Font Size</mat-label>
+            <input
+                matInput
+                placeholder="font size"
+                formControlName="fontSize"
+            >
+        </mat-form-field>
+        <mat-form-field
+            class="field-full-width"
+            appearance="fill"
+        >
+            <mat-label>Font Color</mat-label>
+            <input
+                matInput
+                placeholder="font color"
+                formControlName="fontColor"
+            >
+        </mat-form-field>
+        <mat-form-field
+            class="field-full-width"
+            appearance="fill"
+        >
+            <mat-label>Background Color</mat-label>
+            <input
+                matInput
+                placeholder="Background color"
+                formControlName="backgroundColor"
+            >
+        </mat-form-field>
+        <mat-form-field
+            class="field-full-width"
+            appearance="fill"
+        >
+            <mat-label>Alignment</mat-label>
+            <input
+                matInput
+                placeholder="Alignment of column text"
+                formControlName="alignment"
+            >
+        </mat-form-field>
+        <mat-checkbox
+                class="example-margin"
+                formControlName="textWrap"
+            >
+                Text-Wrap
+            </mat-checkbox>
+        <div class="form-buttons">
+            <button
+                type="submit"
+                mat-raised-button
+                color="primary"                
+            >
+                OK
+            </button>
+            <button
+                type="button"
+                mat-raised-button
+                (click)="hideDialog()"
+            >
+                Cancel
+            </button>
+        </div>
+    </form>
+</div>
