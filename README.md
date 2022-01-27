@@ -1,11 +1,3 @@
-<<<<<<< c4dfae546b288ef5ce7189110a6c7c6ae6c5da1f
-# syncfusion-demo
-=======
-<<<<<<< c4dfae546b288ef5ce7189110a6c7c6ae6c5da1f
-# syncfusion-demo
-=======
-# SyncfusionTreeGrid
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
 
 ## Development server
