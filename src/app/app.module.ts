@@ -13,8 +13,10 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { ModalComponent } from './modal/modal.component';
 
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
@@ -23,6 +25,7 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
   declarations: [
     AppComponent,
     EditColFormComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     MatSelectModule,
     MatButtonModule,
     MatCheckboxModule,
-    SocketIoModule.forRoot(config)
+    SocketIoModule.forRoot(config),
+    MatDialogModule,
   ],
   providers: [ContextMenuService],
   bootstrap: [AppComponent]

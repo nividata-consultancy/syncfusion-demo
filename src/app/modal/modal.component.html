@@ -1,0 +1,28 @@
+<div *ngIf="data.selectedMenuItem == 'editcol'">    
+    <form class="form-container">
+        <mat-dialog-content>
+            <app-edit-col-form
+                [editColForm]="editColForm"
+                [selectedColumn]="data.selectedColumn"
+                [metaData]="data.metaData"
+            ></app-edit-col-form>
+        </mat-dialog-content>
+        <mat-dialog-actions align="end">
+            <button
+                type="button"
+                mat-raised-button
+                color="primary"
+                (click)="onSubmit()"
+            >
+                OK
+            </button>
+            <button
+                type="button"
+                mat-button
+                mat-dialog-close
+            >
+                Cancel
+            </button>
+        </mat-dialog-actions>
+    </form>
+</div>
