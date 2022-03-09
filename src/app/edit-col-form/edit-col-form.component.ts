@@ -9,8 +9,6 @@ import { FormGroup } from '@angular/forms';
 export class EditColFormComponent implements OnInit {
 
   @Input() selectedColumn!: string;
-  @Input() hideDialog!: () => void;
-  @Input() updateColumn!: (arg: Object) => void;
   @Input() editColForm!: FormGroup;
   @Input() metaData!: any;
   dataTypeOptions: Array<string> = ['Text', 'Num', 'Date', 'Boolean', 'List'];  

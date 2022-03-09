@@ -1,4 +1,4 @@
-<div *ngIf="data.selectedMenuItem == 'editcol'">    
+<div *ngIf="formMenuItems.includes(data.selectedMenuItem)">
     <form class="form-container">
         <mat-dialog-content>
             <app-edit-col-form

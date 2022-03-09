@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "~13.1.0",
     "@angular/router": "~13.1.0",
     "@syncfusion/ej2-angular-popups": "^19.4.41",
-    "@syncfusion/ej2-angular-treegrid": "^19.4.40",
+    "@syncfusion/ej2-angular-treegrid": "^19.4.48",
     "ngx-socket-io": "^4.1.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",

@@ -2,15 +2,22 @@
 <ejs-treegrid
     #treegrid
     [dataSource]='data'
-    [enableVirtualization]=true
+    [enableVirtualization]='true'    
+    [showColumnChooser]='true'        
+    [allowSelection]='allowSelection'
     [height]='height'   
     childMapping='subRows' 
+    [allowFiltering]='allowFiltering'
+    [allowSorting]='allowSorting'  
+    [selectionSettings]='selectionOptions'
+    (actionComplete)="sort($event)"
     [contextMenuItems]='contextMenuItems'
     (contextMenuOpen)='contextMenuOpen($event)'
-    (contextMenuClick)='contextMenuClick($event)'
+    (contextMenuClick)='contextMenuClick($event)'   
     [editSettings]='editSettings'
     [treeColumnIndex]='1' 
     [columns]='treegridColumns'
+    [allowRowDragAndDrop]='false'
 >    
 </ejs-treegrid>
 </div>

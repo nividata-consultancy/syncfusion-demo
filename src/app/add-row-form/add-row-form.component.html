@@ -1,0 +1,17 @@
+<div
+    *ngIf="addEditRowForm"
+    [formGroup]="addEditRowForm"
+>
+<div *ngFor="let item of metaData | keyvalue">   
+    <mat-form-field
+    class="field-full-width"
+    appearance="fill"    
+>
+    <mat-label>{{ item.value.name}} </mat-label>
+    <input
+        matInput
+        placeholder="Name of column"
+        [formControlName]="item.key"
+    >
+</mat-form-field>
+</div>

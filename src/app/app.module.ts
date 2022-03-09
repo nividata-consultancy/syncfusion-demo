@@ -17,6 +17,9 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { ModalComponent } from './modal/modal.component';
+import { AddRowFormComponent } from './add-row-form/add-row-form.component';
+import { AddEditRowModalComponent } from './add-edit-row-modal/add-edit-row-modal.component';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
@@ -26,6 +29,9 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     AppComponent,
     EditColFormComponent,
     ModalComponent,
+    AddRowFormComponent,
+    AddEditRowModalComponent,
+    ConfirmDialogComponent,
   ],
   imports: [
     BrowserModule,
