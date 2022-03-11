@@ -3,7 +3,7 @@ import { HttpClient, HttpErrorResponse } from "@angular/common/http";
 
 import {  throwError } from 'rxjs';
 import { retry, catchError } from 'rxjs/operators';
-
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +11,7 @@ import { retry, catchError } from 'rxjs/operators';
 
 export class DataService {
 
-  private REST_API_SERVER = "http://localhost:3000";
+  private REST_API_SERVER = environment.api_url;
 
   constructor(private httpClient: HttpClient) { }
 
